@@ -1,0 +1,115 @@
+.circle-component,
+.spotlight,
+.circle-component-pressed{
+    user-select: none;
+    cursor: pointer;
+    position:relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 140px;
+    height: 140px;
+    background-color: transparent;
+    border-radius: 50%;
+    scale: .9;
+    z-index: 1;
+}
+
+.circle-component-pressed{
+    transform: translateY(.5rem);
+}
+
+.circle-image{
+    position: absolute;
+    z-index: 5;
+}
+
+.circle-white,
+.circle-white-pressed{
+    position:absolute;
+    width: 106px;
+    height: 106px;
+    background-color: white;
+    border-radius: 50%;
+    z-index: 4;
+
+}
+
+.circle-white{
+    transform: scaley(.93);
+    transform-origin: bottom;
+}
+
+.circle-white-pressed{
+    transform: scaley(1);
+
+}
+
+.circle-white-shadow{
+    position:absolute;
+    width: 106px;
+    height: 106px;
+    background-color: rgb(204, 204, 204);
+    border-radius: 50%;
+    z-index: 3;
+}
+
+.circle-color{
+    position:absolute;
+    width: 140px;
+    height: 140px;
+    background-color: red;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.circle-color-shadow{
+    position:absolute;
+    transform: scaleY(1.05);
+    transform-origin: top;
+    width: 140px;
+    height: 140px;
+    background-color: darkred;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.circle-color-shadow-pressed
+{
+    display: hidden;
+}
+
+.spotlight-win,
+.spotlight-lose{
+    z-index: 0;
+}
+
+.spotlight-win:after,
+.spotlight-lose:after{
+    content:'';
+    position: absolute;    
+    width: 250%;
+    height: 250%;
+    border-radius: 50%;
+    background-color: white;
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background: transparent;
+}
+
+.spotlight-win:after{
+    background: radial-gradient(circle, rgb(26, 90, 173) 0% , rgb(65, 133, 165) 20%, rgba(65, 133, 165,.5) 31%,  rgba(71, 143, 177, 0.25) 35%,  rgba(16,41,73,0) 48%,  rgba(16,41,73,0) 65%);
+    background-position: left;  
+    filter: saturate(5)  blur(10px);
+}
+
+.spotlight-lose:after{
+    background: radial-gradient(circle, rgb(173, 26, 95) 0% , rgb(165, 65, 115) 20%, rgba(165, 65, 157, 0.5) 31%,rgba(78, 71, 177, 0.25) 35%,  rgba(16,41,73,0) 48%,  rgba(16,41,73,0) 65%);
+    filter:blur(10px)
+}
+
+/* .spotlight-win:after,
+.spotlight-lose:after{
+    background: radial-gradient(circle, rgb(26, 90, 173) 0% , rgb(65, 133, 165) 20%, rgba(65, 133, 165,.5) 31%,  rgba(71, 143, 177, 0.25) 35%,  rgba(16,41,73,0) 48%,  rgba(16,41,73,0) 65%);
+} */

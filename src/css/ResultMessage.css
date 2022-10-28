@@ -1,0 +1,46 @@
+.result-message{
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    position:absolute;
+    top:65%;
+    left:50%;
+    transform: translateX(-50%);
+    width: 100%;
+}
+
+.result-message-text{
+    font-size: 54px;
+    font-weight: bold;
+}
+
+.play-again-button{
+    background-color: white;
+    color: var(--clr-text-dark);
+    padding-inline: 50px;
+    margin-top: 20px;
+}
+
+
+
+.color-win{
+    color: rgb(9, 202, 154);
+    /* color: white; */
+  }
+  
+  .color-lose{
+    color:hsl(335, 75%, 58%);
+    /* color: white; */
+  }
+  
+  .color-tie{
+    color: hsl(66, 92%, 51%);
+    /* color: white; */
+  }
+
+  @media (min-width:1366px) {
+    .result-message{
+      top:50%;
+    }
+  }

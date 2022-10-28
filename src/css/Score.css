@@ -1,0 +1,70 @@
+.score{
+    width: 100%;    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 3px solid var(--clr-outline-header);
+    border-radius: 7px;
+    padding: 10px 25px;
+    margin-top: 30px;
+    margin-right: 20px;
+}
+
+.score-word{
+    font-size: 20px;
+    margin:0;
+    font-weight: 700;
+    line-height: .8;
+}
+
+.score-square{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    width: 75px;
+    height: 75px;
+    border-radius: 5px;
+}
+
+.score-score,
+.score-number{
+    margin: 0;
+    color: var(--clr-text-dark);
+}
+
+.score-score{
+    font-size: 12px;
+}
+
+.score-number{
+    font-size: 38px;
+}
+
+@media (min-width:1366px){
+    .score{
+        width: 670px;
+        padding: 20px 35px;
+        border-radius: 15px;
+    }
+
+    .score-word{
+        font-size: 44px;
+    }
+
+    .score-square{
+        width: 155px;
+        height: 115px;
+        border-radius: 10px;
+         
+    }
+
+    .score-score{
+        font-size: 22px;
+    }
+    
+    .score-number{
+        font-size: 58px;
+    }
+}

@@ -1,0 +1,39 @@
+.select-overlay{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 'paper scissors'
+                            'rock rock';
+    row-gap: 30px;
+    column-gap: 60px;
+}
+
+.rock{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: rock;
+}
+
+
+.paper{
+    grid-area: paper;
+}
+
+
+.scissors{
+    grid-area: scissors;    
+}
+
+.bg-triangle-wrapper{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50% , -50%);
+}
+
+.bg-triangle{   
+    transform: scale(.6);
+    transform-origin: center;
+}
