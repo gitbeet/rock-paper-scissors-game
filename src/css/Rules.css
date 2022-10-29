@@ -42,8 +42,9 @@
 
     .rules{
         justify-content: space-between;
-        width: 450px;
-        height: 450px;
+        gap: 40px;
+        width: 650px;
+        height: 650px;
         top:50vh;
         left: 50vw;
         transform: translate(-50% , -50%);

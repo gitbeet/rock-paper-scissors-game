@@ -82,10 +82,12 @@ function App() {
   }
 
   function playerSelect(value) {
-    setSelectedByPlayer(value);
     setTimeout(() => {
-      computerSelect();
-    }, 2000);
+      setSelectedByPlayer(value);
+      setTimeout(() => {
+        computerSelect();
+      }, 2000);
+    }, 300);
 
     setSelected((prev) => !prev);
   }
