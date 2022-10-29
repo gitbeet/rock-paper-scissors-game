@@ -1,6 +1,8 @@
 .circle-component,
 .spotlight,
 .circle-component-pressed{
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
     user-select: none;
     cursor: pointer;
     position:relative;
@@ -11,7 +13,6 @@
     height: 140px;
     background-color: transparent;
     border-radius: 50%;
-    scale: .9;
     z-index: 1;
 }
 
@@ -21,7 +22,7 @@
 
 .circle-image{
     position: absolute;
-    z-index: 5;
+    z-index: 6;
 }
 
 .circle-white,
@@ -31,7 +32,7 @@
     height: 106px;
     background-color: white;
     border-radius: 50%;
-    z-index: 4;
+    z-index: 5;
 
 }
 
@@ -51,10 +52,47 @@
     height: 106px;
     background-color: rgb(204, 204, 204);
     border-radius: 50%;
+    z-index: 4;
+}
+
+
+.circle-color-shadow-top-rock,
+.circle-color-shadow-top-paper,
+.circle-color-shadow-top-scissors{
+    display: block;
+    width: 106px;
+    height: 106px;
+    transform: scaley(1.04) scalex(1.02);
+    transform-origin: bottom;
+    border-radius: 50%;
+    position: absolute;
     z-index: 3;
 }
 
-.circle-color{
+.circle-color-shadow-top-rock{
+    background-color: hsl(349, 91%, 38%);
+}
+
+
+.circle-color-shadow-top-paper{
+    background-color: hsl(212, 84%, 45%);
+}
+
+.circle-color-shadow-top-scissors{
+    background-color: hsl(29, 89%, 49%);
+}
+
+
+.circle-color-shadow-top-pressed{
+    display: none;
+}
+
+
+
+
+.circle-color-rock,
+.circle-color-paper,
+.circle-color-scissors{
     position:absolute;
     width: 140px;
     height: 140px;
@@ -63,15 +101,46 @@
     z-index: 2;
 }
 
-.circle-color-shadow{
+
+.circle-color-rock{
+    background: rgb(224, 10, 10);
+    background: linear-gradient(0deg, rgb(177, 25, 33) 0%, rgb(241, 52, 93) 100%);
+}
+
+.circle-color-paper{
+    background: rgb(10, 145, 224);
+    background: linear-gradient(0deg, rgb(40, 115, 201) 0%, rgb(28, 155, 230) 100%);
+}
+
+.circle-color-scissors{
+    background: rgb(224,148,10);
+    background: linear-gradient(0deg, rgb(241, 161, 11) 0%, rgb(240, 210, 20) 100%);
+}
+
+
+
+.circle-color-shadow-rock,
+.circle-color-shadow-paper,
+.circle-color-shadow-scissors{
     position:absolute;
     transform: scaleY(1.05);
     transform-origin: top;
     width: 140px;
     height: 140px;
-    background-color: darkred;
     border-radius: 50%;
     z-index: 1;
+}
+
+.circle-color-shadow-rock{
+    background-color: hsl(349, 72%, 26%);
+}
+
+.circle-color-shadow-paper{
+    background-color: hsl(224, 72%, 41%);
+}
+
+.circle-color-shadow-scissors{
+    background-color: hsl(29, 91%, 42%);
 }
 
 .circle-color-shadow-pressed

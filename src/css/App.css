@@ -2,6 +2,7 @@
   box-sizing: border-box;
   font-family: "Barlow Semi Condensed", sans-serif;
   color: var(--clr-light);
+  /* outline: 1px solid  red !important; */
 }
 
 :root {

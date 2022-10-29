@@ -16,7 +16,7 @@ export default function Rules({ toggleShowRules }) {
           alt="close button"
         />
       </div>
-      <img src={rulesImg} alt="rules" />
+      <img className="rules-image" src={rulesImg} alt="rules" />
       <img
         className="rules-close-button-mobile"
         onClick={toggleShowRules}

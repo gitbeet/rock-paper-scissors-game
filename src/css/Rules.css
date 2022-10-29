@@ -33,6 +33,10 @@
     width: 25px;
 }
 
+.rules-image{
+    width: min(90% , 500px);
+}
+
 
 @media (min-width:1366px){
 

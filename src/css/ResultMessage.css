@@ -1,5 +1,6 @@
 .result-message{
     user-select: none;
+    min-width: max-content;
     display: flex;
     flex-direction:column;
     justify-content: center;
@@ -21,8 +22,6 @@
     padding-inline: 50px;
     margin-top: 20px;
 }
-
-
 
 .color-win{
     color: rgb(9, 202, 154);

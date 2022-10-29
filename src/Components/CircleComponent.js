@@ -17,6 +17,8 @@ export default function CircleComponent({
 
   return (
     <div
+      onPointerDown={() => setPressed(true)}
+      onPointerUp={() => setPressed(false)}
       onMouseDown={() => setPressed(true)}
       onMouseUp={() => setPressed(false)}
       onMouseLeave={() => setPressed(false)}
@@ -47,29 +49,18 @@ export default function CircleComponent({
         }
       ></div>
       <div
-        style={{
-          background: `linear-gradient(to top,${
-            type === "scissors"
-              ? "hsl(39, 89%, 49%) , hsl(40, 84%, 53%)"
-              : type === "paper"
-              ? "hsl(230, 89%, 62%) , hsl(230, 89%, 65%)"
-              : "hsl(349, 71%, 52%) , hsl(349, 70%, 56%)"
-          }`,
-        }}
-        className="circle-color"
-      ></div>
-      <div
-        style={{
-          backgroundColor: `${
-            type === "rock"
-              ? "hsl(349, 72%, 36%)"
-              : type === "paper"
-              ? "hsl(234, 70%, 52%)"
-              : " hsl(29, 91%, 42%)"
-          }`,
-        }}
         className={
-          pressed ? "circle-color-shadow-pressed" : "circle-color-shadow"
+          pressed
+            ? "circle-color-shadow-top-pressed"
+            : `circle-color-shadow-top-${type}`
+        }
+      ></div>
+      <div className={`circle-color-${type}`}></div>
+      <div
+        className={
+          pressed
+            ? "circle-color-shadow-pressed"
+            : `circle-color-shadow-${type}`
         }
       ></div>
     </div>
