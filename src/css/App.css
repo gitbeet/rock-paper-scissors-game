@@ -16,8 +16,11 @@ h1,
 h2,
 h3,
 h4,
-h5 {
+h5,
+h6,
+p {
   margin: 0;
+  padding: 0;
 }
 
 html {
@@ -52,6 +55,14 @@ button {
   border: 1px solid var(--clr-light);
   border-radius: 6px;
   transition: all .15s ease-in-out;
+}
+
+.rules-button{
+  position: relative;
+  z-index: 10;
+  top:85%;
+  left:50%;
+  transform: translateX(-50%);
 }
 
 button:hover{
@@ -92,4 +103,9 @@ button:hover{
   .stages-container {
     transform: scale(1.4);
   }
+
+  .rules-button{
+    margin-right: 100px;
+  }
+
 }

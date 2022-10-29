@@ -15,13 +15,15 @@ export default function ResultStage({
       }`}
     >
       <div className="result-stage-component-wrapper">
+        <p className="result-stage-text-desktop">YOU PICKED</p>
         <CircleComponent
           type={selectedByPlayer}
           spotlight={[message === "You Win!", "win"]}
         />
-        <p>YOU PICKED</p>
+        <p className="result-stage-text">YOU PICKED</p>
       </div>
       <div className="result-stage-component-wrapper">
+        <p className="result-stage-text-desktop">THE HOUSE PICKED</p>
         {!selectedByComputer && <EmptyCircle />}
         {selectedByComputer && (
           <CircleComponent
@@ -29,7 +31,7 @@ export default function ResultStage({
             spotlight={[message === "You Lose!", "lose"]}
           />
         )}
-        <p>THE HOUSE PICKED</p>
+        <p className="result-stage-text">THE HOUSE PICKED</p>
       </div>
     </div>
   );
